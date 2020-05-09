@@ -30,7 +30,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.project.CsvToExcel</mainClass>
+                            <mainClass>com.project.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
