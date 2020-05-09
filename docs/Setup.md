@@ -3,18 +3,35 @@ Requirements:
     - input path
     -output path
     
-1. Please provide input and output path as command line arguments. Please refer below example:
+Project Root Directory: CsvToExcel/
+    
+To create the jar file, execute following command from project root directory: mvn clean install
+
+jar file will be in the CsvToExcel/target folder.
+
+CsvToXml-1.0-SNAPSHOT-jar-with-dependencies.jar will have all the related dependencies within it.
+
+Please follow below steps to run the program using jar file.
+1. Go to project root directory
+2. Please provide input and output path as command line arguments.
+3. Run below command from the project root directory.
 
 java -jar target/CsvToXml-1.0-SNAPSHOT-jar-with-dependencies.jar input_path output_path
 
-Format for path variables:
+For Windows=>
 input_path = "D:\\Projects\\filename.csv"
-output_path = "D:\\Projects\\filename.xls"
+output_path = "D:\\Projects\\filename.xlsx"
 
-java -jar target/CsvToXml-1.0-SNAPSHOT-jar-with-dependencies.jar "D:\\Projects\\filename.csv" "D:\\Projects\\filename.xls"
+java -jar target/CsvToXml-1.0-SNAPSHOT-jar-with-dependencies.jar "D:\\Projects\\filename.csv" "D:\\Projects\\filename.xlsx"
+
+For Linux=>
+input_path = "~/Desktop/filename.csv"
+output_path = "~/Desktop/filename.xlsx"
+
+java -jar target/CsvToXml-1.0-SNAPSHOT-jar-with-dependencies.jar "~/Desktop/filename.csv" "~/Desktop/filename.xlsx"
 
 A sample csv file of 10000 records is in src/main/resources folder.
 
 Note: Do not change the jar name and input or output extension.
 
-To run the project using IDE, please find IDESetup.md
+To run the project using IDE, please find docs/IDESetup.md

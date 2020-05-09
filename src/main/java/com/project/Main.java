@@ -1,6 +1,6 @@
 package com.project;
 
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -18,12 +18,12 @@ public class Main {
 
         Long startTime = System.currentTimeMillis();
         LOGGER.info("Starting converting csv to excel");
-        LOGGER.info("Each sheet will have 50000 records");
-        LOGGER.info("Records will be written to excel file in a bunch of 1500");
+        LOGGER.info("Each sheet will have maximum 50000 records");
+        LOGGER.info("Records will be written to excel file in a bunch of 3000");
 
         CsvToExcel csvToExcel = new CsvToExcel();
 
-        try (HSSFWorkbook workbook = new HSSFWorkbook();
+        try (XSSFWorkbook workbook = new XSSFWorkbook();
              BufferedReader br = new BufferedReader(new FileReader(inputFilePath))) {
 
             csvToExcel.readDataFromCsv(workbook, br, outputFilePath);
@@ -32,7 +32,7 @@ public class Main {
             Long endTime = System.currentTimeMillis();
             LOGGER.log(Level.INFO, "Total execution time: {0} milliseconds", endTime - startTime);
         } catch (IOException e) {
-            LOGGER.info("Exception while converting csv to excel");
+            LOGGER.log(Level.INFO, "Exception while converting csv to excel: {0}", e.getMessage());
         }
     }
 }
