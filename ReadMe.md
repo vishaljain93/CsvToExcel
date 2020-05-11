@@ -15,3 +15,7 @@ It has to be modified manually as per the heap size of the system.
 
 To run through terminal/cmd, please follow docs/Setup.md
 To run through IDE, please follow docs/IDESetup.md
+
+
+To run through Linux, please follow docs/ShellSetup.md
+It has its own bunch count setup, you will find the details in the setup file.
