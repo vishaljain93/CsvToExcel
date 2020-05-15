@@ -13,6 +13,9 @@ public class CommonMethods {
 
     private static final Logger LOGGER = Logger.getLogger(CommonMethods.class.getName());
 
+    private CommonMethods() {
+    }
+
     public static XSSFSheet createNewSheet(XSSFWorkbook workbook, int sheetNumber) {
         LOGGER.log(Level.INFO, "Sheet {0} created for next 50000 records", sheetNumber);
         return workbook.createSheet(Integer.toString(sheetNumber));
